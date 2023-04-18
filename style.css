@@ -8,16 +8,58 @@
 
 .topbar{
     font-family: sans-serif;
-    
-    
-
+    padding: 0;
+    position: relative;
 }
-.topbar:hover{
+.topbar::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 20px;    
+    border-top: 3px solid #e84393;
+    border-left: 3px solid #e84393;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    opacity: 0;
+    
+}
+
+.topbar::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 20px;    
+    border-right: 3px solid #6c5ce7;
+    border-bottom: 3px solid #6c5ce7;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    opacity: 0;
+    
+}
+
+.topbar:hover:before{
+
+    left: -3px;
+    top: -3px; 
+    opacity: 1;   
+}
+.topbar:hover::after{
+
+    right: -3px;
+    bottom: -3px; 
+    opacity: 1;   
+}
+
+
+
+/* .topbar:hover{
     cursor: pointer;
-    background-color: rgb(52, 50, 50);
+    background-color: rgb(34, 33, 33);
     
    
-}
+} */
 
 .hello{
     margin-top: 200px;
@@ -213,7 +255,7 @@
 }
 .btnmain1{
     position: absolute;
-    inset: 4px;
+inset: 4px;
     border-radius: 8px;
     background: #28292d;
     z-index: 10;
