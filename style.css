@@ -43,14 +43,14 @@
 
 .topbar:hover:before{
 
-    left: -3px;
-    top: -3px; 
+    left: -1px;
+    top: -1px; 
     opacity: 1;   
 }
 .topbar:hover::after{
 
-    right: -3px;
-    bottom: -3px; 
+    right: -1px;
+    bottom: -1px; 
     opacity: 1;   
 }
 
