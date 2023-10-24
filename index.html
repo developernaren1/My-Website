@@ -107,5 +107,27 @@
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+     <script src="script.js?v=1.0"></script>
+
+    <script>
+        // You can use JavaScript to add a unique parameter to your resource URLs
+        // const refreshButton = document.createElement('button');
+        // refreshButton.textContent = 'Reload';
+        refreshButton.addEventListener('click', function() {
+            // Add a unique timestamp to the resource URLs
+            const styles = document.querySelector('link[rel="stylesheet"]');
+            styles.href = 'styles.css?v=' + new Date().getTime();
+
+            const script = document.querySelector('script');
+            script.src = 'script.js?v=' + new Date().getTime();
+
+            // Reload the page
+            location.reload();
+        });
+
+        document.body.appendChild(refreshButton);
+    </script>
+
 </body>
 </html>
